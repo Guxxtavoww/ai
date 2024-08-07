@@ -11,6 +11,17 @@ def sigmoidFunction(sum: float) -> float:
 def hyperbolicTangentFunction(x: float):
     return (np.exp(x) - np.exp(-x)) / (np.exp(x) + np.exp(-x))
 
-user_input = float(input('Insira um x para a função hyper: '))
+def reluFunction(sum: float):
+    if sum >= 0:
+        return sum
+    return 0
 
-print(f"hyper: {hyperbolicTangentFunction(user_input)}")
+def linearFunction(sum: float):
+    return sum
+
+def softmaxFunction(x: list[float]):
+    ex = np.exp(x)
+
+    return ex / ex.sum()
+
+print(reluFunction(2.1))
